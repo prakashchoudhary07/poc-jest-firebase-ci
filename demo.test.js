@@ -59,16 +59,17 @@ describe("DEMO TEST", () => {
     } else {
       console.log("Document data:", doc.data());
     }
-    expect(doc.data().state).toBe('CA');
-  });
+    expect(doc.data().state).toBe("CA");
+  }, 30000);
 });
 
 describe("DEMO TEST", () => {
+
   test("ADDD 1 + 1", () => {
     expect(2).toBe(2);
   });
-  test("ADDD 1 + 1", async () => {
 
+  test("ADDD 1 + 1", async () => {
     // await firebase.clearFirestoreData({ projectId });
     const docRef = db.collection("request_invite").doc("1");
     await docRef.set({
@@ -76,11 +77,12 @@ describe("DEMO TEST", () => {
       email: "email",
     });
     const doc = await docRef.get();
-    if (doc.exists) { 
+    if (doc.exists) {
       console.log("doc exist", doc.data());
     }
-    expect( doc.data().email).toBe('email');
-  });
+    expect(doc.data().email).toBe("email");
+  }, 30000);
+
   test("ADDD 1 + 1", async () => {
     const citiesRef = db.collection("cities");
 
@@ -91,7 +93,7 @@ describe("DEMO TEST", () => {
       capital: false,
       population: 860000,
     });
-    
+
     const cityRef1 = db.collection("cities").doc("SF");
     const doc = await cityRef1.get();
     if (!doc.exists) {
@@ -99,6 +101,7 @@ describe("DEMO TEST", () => {
     } else {
       console.log("Document data:", doc.data());
     }
-    expect(doc.data().state).toBe('CA');
-  });
+    expect(doc.data().state).toBe("CA");
+  }, 30000);
+  
 });
