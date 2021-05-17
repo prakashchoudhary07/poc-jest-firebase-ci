@@ -27,6 +27,8 @@ app.use(async (req, res) => {
   res.status(500).json('NOT FOUND');
 });
 
-app.listen(5000, () => {
-  console.log('started at port 5000');
+const port = process.env.PORT || '5000';
+
+app.listen(port, () => {
+  console.log('started at port', port);
 });
