@@ -34,7 +34,7 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         threshold: 80 # optional parameter
-        test_script: firebase emulators:exec --project example 'npm test'
+        test_script: npm test
     # - run: npm run build --if-present
     # - run: firebase emulators:exec --project example 'npm test'
     # - run: npm run test:2
