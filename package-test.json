@@ -8,11 +8,14 @@
     "tt": "jest",
     "test": "jest"
   },
+  "engines": {
+    "node": "14.x",
+    "npm": "7.x"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@firebase/testing": "^0.20.11",
-    "colorthief": "^2.3.2",
     "express": "^4.17.1",
     "firebase-tools": "^9.10.2",
     "nodemon": "^2.0.7"
